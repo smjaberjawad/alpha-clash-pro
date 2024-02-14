@@ -1,3 +1,7 @@
+document.addEventListener('keyup', function handleKeyboardButtonPress() {
+    console.log('button pressed');
+});
+
 function continueGame() {
     const alphabet = alphabetGenerator();
 
