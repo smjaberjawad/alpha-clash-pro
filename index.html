@@ -17,10 +17,10 @@
 
 
         <!-- Home Section -->
-        <section id="home" class="text-white min-h-screen flex flex-col justify-center items-center gap-12 hidden">
+        <section id="home" class="text-white min-h-screen flex flex-col justify-center items-center gap-12">
             <h1 class="font-anton text-9xl">ALPHABET CLASH</h1>
             <p class="font-medium text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button
+            <button onclick="enterTheGame()"
                 class="bg-white text-black font-bold text-2xl px-8 py-6 rounded-lg duration-200 hover:bg-slate-400">Play
                 Now</button>
         </section>
@@ -38,7 +38,7 @@
                             playing...</p>
                     </div>
                     <div class="flex justify-center items-center h-full">
-                        <p class="text-9xl font-bold">Y</p>
+                        <p id="current_alphabet" class="text-9xl font-bold uppercase">Y</p>
                     </div>
                 </div>
             </div>
@@ -46,37 +46,37 @@
             <!-- Keyboard Container -->
             <div>
                 <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">q</kbd>
-                    <kbd class="kbd">w</kbd>
-                    <kbd class="kbd">e</kbd>
-                    <kbd class="kbd">r</kbd>
-                    <kbd class="kbd">t</kbd>
-                    <kbd class="kbd">y</kbd>
-                    <kbd class="kbd">u</kbd>
-                    <kbd class="kbd">i</kbd>
-                    <kbd class="kbd">o</kbd>
-                    <kbd class="kbd">p</kbd>
+                    <kbd id="q" class="kbd uppercase">q</kbd>
+                    <kbd id="w" class="kbd uppercase">w</kbd>
+                    <kbd id="e" class="kbd uppercase">e</kbd>
+                    <kbd id="r" class="kbd uppercase">r</kbd>
+                    <kbd id="t" class="kbd uppercase">t</kbd>
+                    <kbd id="y" class="kbd uppercase">y</kbd>
+                    <kbd id="u" class="kbd uppercase">u</kbd>
+                    <kbd id="i" class="kbd uppercase">i</kbd>
+                    <kbd id="o" class="kbd uppercase">o</kbd>
+                    <kbd id="p" class="kbd uppercase">p</kbd>
                 </div>
                 <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">a</kbd>
-                    <kbd class="kbd">s</kbd>
-                    <kbd class="kbd">d</kbd>
-                    <kbd class="kbd">f</kbd>
-                    <kbd class="kbd">g</kbd>
-                    <kbd class="kbd">h</kbd>
-                    <kbd class="kbd">j</kbd>
-                    <kbd class="kbd">k</kbd>
-                    <kbd class="kbd">l</kbd>
+                    <kbd id="a" class="kbd uppercase">a</kbd>
+                    <kbd id="s" class="kbd uppercase">s</kbd>
+                    <kbd id="d" class="kbd uppercase">d</kbd>
+                    <kbd id="f" class="kbd uppercase">f</kbd>
+                    <kbd id="g" class="kbd uppercase">g</kbd>
+                    <kbd id="h" class="kbd uppercase">h</kbd>
+                    <kbd id="j" class="kbd uppercase">j</kbd>
+                    <kbd id="k" class="kbd uppercase">k</kbd>
+                    <kbd id="l" class="kbd uppercase">l</kbd>
                 </div>
                 <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">z</kbd>
-                    <kbd class="kbd">x</kbd>
-                    <kbd class="kbd">c</kbd>
-                    <kbd class="kbd">v</kbd>
-                    <kbd class="kbd">b</kbd>
-                    <kbd class="kbd">n</kbd>
-                    <kbd class="kbd">m</kbd>
-                    <kbd class="kbd">/</kbd>
+                    <kbd id="z" class="kbd uppercase">z</kbd>
+                    <kbd id="x" class="kbd uppercase">x</kbd>
+                    <kbd id="c" class="kbd uppercase">c</kbd>
+                    <kbd id="v" class="kbd uppercase">v</kbd>
+                    <kbd id="b" class="kbd uppercase">b</kbd>
+                    <kbd id="n" class="kbd uppercase">n</kbd>
+                    <kbd id="m" class="kbd uppercase">m</kbd>
+                    <kbd id="/" class="kbd uppercase">/</kbd>
                 </div>
             </div>
 
@@ -113,7 +113,8 @@
 
     </main>
 
-    <script src="js/"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/alpha-clash.js"></script>
 </body>
 
 </html>
