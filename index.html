@@ -102,11 +102,12 @@
         <!-- Score Section -->
         <section id="score" class="text-white min-h-screen flex flex-col justify-center items-center hidden">
             <div class="flex flex-col justify-center items-center gap-6 bg-violet-600 rounded-2xl px-12 py-11">
+                <h3 class="text-3xl">Game Over !</h3>
                 <h1 class="text-6xl">
                     <span class="font-extrabold">Score :</span>
-                    <span class="font-semibold">14</span>
+                    <span id="final_score" class="font-semibold">0</span>
                 </h1>
-                <button
+                <button onclick="playAgain()"
                     class="bg-white text-black font-bold text-2xl px-8 py-4 rounded-lg duration-200 hover:bg-slate-400">Play
                     Again</button>
                 <p class="font-medium text-xl">Practice will make you Pro</p>

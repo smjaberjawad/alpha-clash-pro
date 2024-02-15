@@ -8,22 +8,23 @@ document.addEventListener('keyup', function handleKeyboardButtonPress(e) {
     console.log(currentKey, pressedKey);
 
     if (pressedKey === currentKey) {
-        console.log('you got a point');
-
-        const currentScoreElement = document.getElementById('current_score');
-        const currentScoreText = currentScoreElement.innerText;
-        const currentScore = parseInt(currentScoreText);
-        currentScoreElement.innerText = currentScore + 1;
+        const currentScore = getTextElementValueById('current_score');
+        const updatedScore = currentScore + 1;
+        setValueById('current_score', updatedScore);
 
         continueGame();
         removeBgColorById(currentKey);
-    } else {
-        console.log('you missed a point');
 
-        const currentLifeElement = document.getElementById('current_life');
-        const currentLifeText = currentLifeElement.innerText;
-        const currentLife = parseInt(currentLifeText);
-        currentLifeElement.innerText = currentLife - 1;
+        const finalScore = document.getElementById('final_score');
+        finalScore.innerText = updatedScore;
+    } else {
+        const currentLife = getTextElementValueById('current_life');
+        const updatedLife = currentLife - 1;
+        setValueById('current_life', updatedLife);
+
+        if (updatedLife === 0) {
+            gameOver();
+        }
     }
 });
 
@@ -40,4 +41,16 @@ function enterTheGame() {
     hideElementById('home');
     showElementById('playground');
     continueGame();
+}
+
+function gameOver() {
+    hideElementById('playground');
+    showElementById('score');
+}
+
+function playAgain() {
+    hideElementById('score');
+    showElementById('playground');
+    setValueById('current_life', 5);
+    setValueById('current_score', 0);
 }
