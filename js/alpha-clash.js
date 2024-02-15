@@ -9,10 +9,21 @@ document.addEventListener('keyup', function handleKeyboardButtonPress(e) {
 
     if (pressedKey === currentKey) {
         console.log('you got a point');
+
+        const currentScoreElement = document.getElementById('current_score');
+        const currentScoreText = currentScoreElement.innerText;
+        const currentScore = parseInt(currentScoreText);
+        currentScoreElement.innerText = currentScore + 1;
+
         continueGame();
         removeBgColorById(currentKey);
     } else {
         console.log('you missed a point');
+
+        const currentLifeElement = document.getElementById('current_life');
+        const currentLifeText = currentLifeElement.innerText;
+        const currentLife = parseInt(currentLifeText);
+        currentLifeElement.innerText = currentLife - 1;
     }
 });
 
